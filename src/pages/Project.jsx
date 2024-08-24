@@ -2,7 +2,7 @@ import React from 'react'
 import { projects } from '../constants'
 import { Link } from 'react-router-dom'
 import { arrow } from '../assets/icons'
-import CTA from '../Components/cta'
+import CTA from '../Components/CTA'
 
 const Project = () => {
   return (
@@ -12,7 +12,7 @@ const Project = () => {
       </h1>
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
-          Worked thorugh Many PRojects Many OF them are open-source.
+          Worked thorugh Many Projects Many OF them are open-source.
         </p>
       </div>
 
@@ -25,7 +25,7 @@ const Project = () => {
             <img
               src={project.iconUrl}
               alt="Project Icon"
-              className='w-1/2 h-1/2 object-contain'
+              className='w-10 h-10 object-contain'
             />
           </div>
           </div>
@@ -40,7 +40,7 @@ const Project = () => {
           rel="noopener noreferrer"
           className='font-semibold text-blue-600'
           >
-              Live Link
+              Link
           </Link>
           <img
           src={arrow}
