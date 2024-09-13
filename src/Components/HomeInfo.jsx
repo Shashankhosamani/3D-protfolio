@@ -19,19 +19,19 @@ const renderContent={
         neo-brutalism-blue py-4 px-8 text-white mx-5'>Hi, I am 
             <span className='font-semibold'> Shashank</span> 👋
             <br/>
-            A Software engg from India
+            I am  Software engineer. Intersted New Technology . 
         </h1>
     ),
     2: (
         <InfoBox
-        text="Worked with my FrameWorks and Tools"
+        text="Worked with many FrameWorks and Tools"
         link="/about"
         btnText="Learn More"
         />
     ),
     3: (
         <InfoBox
-            text="Done MUltiple Projects Working with Many tools And Frame Works"
+            text="Built MUltiple Projects Working with Many tools And Frame Works"
             link="/Projects"
             btnText="Visit MY Portfolio"
         />
