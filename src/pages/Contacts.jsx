@@ -37,6 +37,7 @@ const Contact = () => {
           to_email: "shashankhosamani1109@gmail.com",
           message: form.message,
         },
+        
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
@@ -71,7 +72,7 @@ const Contact = () => {
         }
       );
   };
-
+  console.log(import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY);
   return (
     <section className='relative flex lg:flex-row flex-col max-container h-[100vh'>
       {alert.show && <Alert {...alert} />}
