@@ -1,4 +1,3 @@
-import React from 'react'
 import { projects } from '../constants'
 import { Link } from 'react-router-dom'
 import { arrow } from '../assets/icons'
@@ -12,7 +11,7 @@ const Project = () => {
       </h1>
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
-          Worked thorugh Many Projects Many OF them are open-source.
+          Independent projects I&apos;ve built and shipped outside of work.
         </p>
       </div>
 
@@ -20,8 +19,8 @@ const Project = () => {
         {projects.map((project)=>(
           <div className='lg:w-[400px] w-full' key={project.name}>
           <div className='block-container w-12 h-12'>
-          <div className={`btn-back rounded-x1 ${project.theme}`}/>
-          <div className='btn-fron rounded-xl flex justify-center items-center'>
+          <div className={`btn-back rounded-xl ${project.theme}`}/>
+          <div className='btn-front rounded-xl flex justify-center items-center'>
             <img
               src={project.iconUrl}
               alt="Project Icon"
@@ -34,6 +33,7 @@ const Project = () => {
             {project.name}
           </h4>
           <p className='mt-2 text-slate-500'> {project.description}</p>
+          {project.link && (
           <div className='mt-5 flex items-center gap-2 font-poppins'>
           <Link to={project.link}
           target='_blank'
@@ -47,6 +47,7 @@ const Project = () => {
           alt="arrow"
           className='w-4 h-4 object-contain'></img>
           </div>
+          )}
           </div>
           </div>
         ))}

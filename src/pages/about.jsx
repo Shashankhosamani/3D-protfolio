@@ -1,4 +1,3 @@
-import React from 'react';
 import { skills, experiences } from '../constants';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -7,11 +6,11 @@ const About = () => {
   return (
     <section className='max-container'>
       <h1 className='head-text'>
-        Hello, I'm <span className='blue-gradient_text font-semibold drop-shadow-sm'>Shashank</span>
+        Hello, I&apos;m <span className='blue-gradient_text font-semibold drop-shadow-sm'>Shashank</span>
       </h1>
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
-          Recent Computer Science graduate from PES University, eager to start a career in software development. Passionate about learning new technologies.
+          Full-stack software engineer who has shipped production reconciliation and financial-workflow infrastructure at a fintech startup, including an AI-powered feature for querying uploaded financial data, and independently built and shipped a full-stack expense-tracking product. Comfortable owning a feature end-to-end: backend logic, APIs, database design, and frontend.
         </p>
       </div>
         <div className='py-10 flex flex-col'>
@@ -20,7 +19,7 @@ const About = () => {
             {skills.map((skill, index) => (
               <div key={index} className='block-container w-20 h-20'>
                 <div className='btn-back rounded-xl' />
-                <div className='btn-front rounded-x1 flex justify-center items-center'>
+                <div className='btn-front rounded-xl flex justify-center items-center'>
                   <img
                     src={skill.imageUrl}
                     alt={skill.name}
@@ -37,7 +36,7 @@ const About = () => {
         <h3 className='subhead-text'>Work Experiences</h3>
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
           <p>
-            I'M an Undergraduate Student
+            Software Development Engineer I at OneCap Technologies, building AI-powered financial-workflow infrastructure.
           </p>
         </div>
         <div className='mt-12 flex'>
@@ -45,7 +44,7 @@ const About = () => {
             {experiences.map((experience) => (
               <VerticalTimelineElement key={experience.company_name}
                 date={experience.date}
-                icon={<div className='flex justify-center items-center w-full h-hull'>
+                icon={<div className='flex justify-center items-center w-full h-full'>
                 <img
                 src={experience.icon}
                 alt={experience.company_name}

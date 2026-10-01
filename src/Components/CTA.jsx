@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import {socialLinks } from '../constants';
 
@@ -6,8 +5,8 @@ const CTA = () => {
   return (
     <section className='cta'>
     <p className='cta-text'>
-        Have A Project In Mind ? <br className='sm:block hidden'/>
-        Let's Build Something
+        Have a project in mind? <br className='sm:block hidden'/>
+        Let&apos;s build something
     </p>
       <div className=' mt-14 flex flex-wrap gap-2'>
             {socialLinks.map((socialLink, index) => (

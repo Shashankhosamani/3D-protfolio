@@ -1,5 +1,6 @@
+/* eslint-disable react/no-unknown-property */
 import { useGLTF } from '@react-three/drei'
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import skyScence from '../assets/3d/sky.glb'
 import { useFrame } from '@react-three/fiber';
 

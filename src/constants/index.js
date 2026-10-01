@@ -1,38 +1,58 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
 import {
-    car,
-    contact,
+    ai,
+    fastapi,
+    github,
+    javascript,
+    mysql,
+    nextjs,
+    postgresql,
+    python,
+    react,
+    cplusplus,
+    sql,
+    tailwindcss,
+    typescript,
+    linkedin,
+    twitter,
+    onecap,
+    costiq,
+    solarpanel,
+    html,
     css,
-    estate,
+    nodejs,
     express,
     git,
-    github,
-    html,
-    javascript,
-    linkedin,
     mongodb,
-    motion,
-    mui,
-    nextjs,
-    nodejs,
-    pricewise,
-    react,
-    redux,
-    sass,
-    snapgram,
-    summiz,
-    tailwindcss,
-    threads,
-    typescript,
     unity,
-    blender,
-    mysql,
-    cavelabs,
-    twitter,
-    solarpanel
+    blender
 } from "../assets/icons";
 
 export const skills = [
+    {
+        imageUrl: python,
+        name: "Python",
+        type: "Languages",
+    },
+    {
+        imageUrl: typescript,
+        name: "TypeScript",
+        type: "Languages",
+    },
+    {
+        imageUrl: javascript,
+        name: "JavaScript",
+        type: "Languages",
+    },
+    {
+        imageUrl: sql,
+        name: "SQL",
+        type: "Languages",
+    },
+    {
+        imageUrl: cplusplus,
+        name: "C++",
+        type: "Languages",
+    },
     {
         imageUrl: html,
         name: "HTML",
@@ -44,9 +64,24 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: javascript,
-        name: "JavaScript",
+        imageUrl: nextjs,
+        name: "Next.js",
         type: "Frontend",
+    },
+    {
+        imageUrl: react,
+        name: "React.js",
+        type: "Frontend",
+    },
+    {
+        imageUrl: tailwindcss,
+        name: "Tailwind CSS",
+        type: "Frontend",
+    },
+    {
+        imageUrl: fastapi,
+        name: "FastAPI",
+        type: "Backend",
     },
     {
         imageUrl: nodejs,
@@ -59,44 +94,34 @@ export const skills = [
         type: "Backend",
     },
     {
-        imageUrl: git,
-        name: "Git",
-        type: "Version Control",
-    },
-    {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Version Control",
-    },
-    {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
+        imageUrl: postgresql,
+        name: "PostgreSQL",
+        type: "Databases",
     },
     {
         imageUrl: mysql,
         name: "MySQL",
-        type: "Database",
+        type: "Databases",
     },
     {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
+        imageUrl: mongodb,
+        name: "MongoDB",
+        type: "Databases",
     },
     {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
+        imageUrl: github,
+        name: "GitHub",
+        type: "Tools",
     },
     {
-        imageUrl: tailwindcss,
-        name: "Tailwind CSS",
-        type: "Frontend",
+        imageUrl: git,
+        name: "Git",
+        type: "Tools",
     },
     {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
+        imageUrl: ai,
+        name: "LLM APIs, Prompt Engineering, MCP, Agent SDKs",
+        type: "AI/Agents",
     },
     {
         imageUrl: unity,
@@ -104,27 +129,41 @@ export const skills = [
         type: "3D Modeling and Development Tool",
     },
     {
-        imageUrl:blender,
+        imageUrl: blender,
         name: "Blender",
         type: "3D Modeling and Animation Tool",
     },
-   
 ];
 
 export const experiences = [
     {
-        title: "Intern in Cave Labs PES University",
-        company_name: "Cave Labs",
-        icon: cavelabs,
-        date: "June 2024 - August 2024",
+        title: "Software Development Engineer I",
+        company_name: "OneCap Technologies Pvt. Ltd.",
+        icon: onecap,
+        iconBg: "#2b77e7",
+        date: "July 2025 - Present",
         points: [
-            "Worked as an Intern Under University Professor",
-            "Worked on 3D Modeling of the components in Blender and Unity",
-            "Worked as Front-End Developer"
-            
+            "Owned and developed the frontend architecture from the ground up, building and scaling a single application spanning 10-11 distinct products, using Next.js, TypeScript, and React.",
+            "Owned matching logic for bank reconciliation as part of the team building OneCap's AI-native reconciliation engine, validated on 2,000+ ledger pairs.",
+            "Owned end-to-end a self-serve AI-powered feature letting customers upload CSV, XLS, or PDF statements from any ERP and directly ask questions about their data - no API integration or manual processing required.",
+            "Designed and built balance confirmation workflows end-to-end - request creation, customer responses, notifications, and email communication - with RESTful APIs and PostgreSQL schemas.",
+            "Led the frontend implementation of a zero-downtime authentication migration for 13 customers with multiple users each, moving from cookie-based auth to JWT-based auth with no user-visible disruption.",
+            "Built an internal AI-powered debugging chat tool that replaced manually downloading and cross-referencing multiple files with a single conversational interface; wrote skills to dynamically generate instructions from uploaded files.",
+            "Set up GA4 event tracking across the signup funnel, identifying and removing form fields that were causing drop-off.",
         ],
     },
-    
+    {
+        title: "Software Development Intern",
+        company_name: "OneCap Technologies Pvt. Ltd.",
+        icon: onecap,
+        iconBg: "#2b77e7",
+        date: "February 2025 - July 2025",
+        points: [
+            "Built responsive UIs in Next.js/React for customer-facing financial workflows and integrated them with backend APIs.",
+            "Built reusable UI components and forms, reducing repeated work across feature teams.",
+            "Partnered with backend engineers to implement business workflows and debug production UI issues.",
+        ],
+    },
 ];
 
 export const socialLinks = [
@@ -137,22 +176,27 @@ export const socialLinks = [
         name: 'LinkedIn',
         iconUrl: linkedin,
         link: 'https://www.linkedin.com/in/shashank-l-h/',
-    }
-    ,
+    },
     {
-        name : 'X',
+        name: 'X',
         iconUrl: twitter,
-        link:'https://x.com/Shashank__h'
+        link: 'https://x.com/Shashank__h'
     }
 ];
 
 export const projects = [
     {
+        iconUrl: costiq,
+        theme: 'btn-back-blue',
+        name: 'Costiq - Personal Expense Tracker',
+        description: 'SMS-based automatic expense tracking app built for personal use to automate expense logging without manual entry. v1 shipped and in daily use; currently extending the architecture with multi-tenancy and security hardening to support additional users.',
+        link: null,
+    },
+    {
         iconUrl: solarpanel,
         theme: 'btn-back-black',
         name: 'Solar-Panel Array 3D',
-        description: 'Developed a web 3D application that Calculates the Power generated by each Solar-Panel at particular Location and time  using Solar Radtion',
+        description: 'Web 3D application that calculates the power generated by each solar panel at a particular location and time using solar radiation.',
         link: 'https://github.com/Shashankhosamani/SolarpanelFabrik',
     },
-  
 ];

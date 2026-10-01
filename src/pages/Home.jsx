@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import {Suspense, useEffect, useRef, useState}from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader  from '../Components/Loader'
@@ -18,12 +19,13 @@ const Home = () => {
   const [isPlayingMUsic,setIsPlayngMusic]=useState(false);
 
   useEffect(()=>{
+    const audio = audioRef.current;
     if(isPlayingMUsic){
-      audioRef.current.play();
+      audio.play();
 
     }
     return()=>{
-      audioRef.current.pause();
+      audio.pause();
     }
   },[isPlayingMUsic]);
 

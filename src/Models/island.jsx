@@ -6,9 +6,8 @@ License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 Source: https://sketchfab.com/3d-models/foxs-islands-163b68e09fcc47618450150be7785907
 Title: Fox's islands
 */
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useCallback } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
-import React from 'react';
 import { useGLTF } from '@react-three/drei';
 import islandScence from '../assets/3d/island.glb';
 import { a } from '@react-spring/three';
@@ -21,23 +20,23 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
     const rotationSpeed = useRef(0);
     const dampingFactor = 0.95;
 
-    const handlePointerDown = (e) => {
+    const handlePointerDown = useCallback((e) => {
         e.stopPropagation();
         e.preventDefault();
         setIsRotating(true);
 
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
         lastX.current = clientX;
-    };
+    }, [setIsRotating]);
 
-    const handlePointerUp = (e) => {
+    const handlePointerUp = useCallback((e) => {
         e.stopPropagation();
         e.preventDefault();
         setIsRotating(false);
 
-    };
+    }, [setIsRotating]);
 
-    const handlePointerMove = (e) => {
+    const handlePointerMove = useCallback((e) => {
         e.stopPropagation();
         e.preventDefault();
         if (isRotating) {
@@ -47,9 +46,9 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
             lastX.current = clientX;
             rotationSpeed.current = delta * 0.01 * Math.PI;
         }
-    };
+    }, [isRotating, viewport]);
 
-    const handleKeyDown = (e) => {
+    const handleKeyDown = useCallback((e) => {
         if (e.key === 'ArrowLeft') {
             setIsRotating(true);
             islandRef.current.rotation.y += 0.01 *Math.PI;
@@ -59,13 +58,13 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
             islandRef.current.rotation.y -= 0.01 *Math.PI;
             rotationSpeed.current = -0.0125;
         }
-    };
+    }, [setIsRotating]);
 
-    const handleKeyUp = (e) => {
+    const handleKeyUp = useCallback((e) => {
         if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
             setIsRotating(false);
         }
-    };
+    }, [setIsRotating]);
 
     useFrame(() => {
         if (!isRotating) {
@@ -115,7 +114,7 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
             document.removeEventListener('keydown', handleKeyDown);
             document.removeEventListener('keyup', handleKeyUp);
         };
-    }, [gl, handlePointerDown, handlePointerUp, handlePointerMove]);
+    }, [gl, handlePointerDown, handlePointerUp, handlePointerMove, handleKeyDown, handleKeyUp]);
 
     return (
         <a.group ref={islandRef} {...props}>

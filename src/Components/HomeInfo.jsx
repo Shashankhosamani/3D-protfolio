@@ -1,5 +1,3 @@
-import { render } from '@react-three/fiber'
-import React from 'react'
 import { Link } from 'react-router-dom';
 import {arrow} from '../assets/icons'
 
@@ -19,26 +17,26 @@ const renderContent={
         neo-brutalism-blue py-4 px-8 text-white mx-5'>Hi, I am 
             <span className='font-semibold'> Shashank</span> 👋
             <br/>
-            I am  Software engineer. Intersted New Technology . 
+            I am a Full-Stack Software Engineer building AI-powered products.
         </h1>
     ),
     2: (
         <InfoBox
-        text="Worked with many FrameWorks and Tools"
+        text="Worked with many frameworks and tools"
         link="/about"
         btnText="Learn More"
         />
     ),
     3: (
         <InfoBox
-            text="Built MUltiple Projects Working with Many tools And Frame Works"
+            text="Built multiple projects working with many tools and frameworks"
             link="/Projects"
-            btnText="Visit MY Portfolio"
+            btnText="Visit My Portfolio"
         />
     ),
     4: (
         <InfoBox
-            text="Looking For a Dev to Build Project ? I'm few key Stokes Away"
+            text="Looking for a dev to build your project? I'm a few keystrokes away"
             link="/Contact"
             btnText="Let's Talk"
         />
